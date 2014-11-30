@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:orientation="vertical"
+       android:background="@drawable/background1" >
+
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:padding="7dp"
+        android:text="@string/sendall" 
+        />  
+    <EditText
+        android:id="@+id/editText1"
+       android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:hint="@string/themessage"
+        android:inputType="textCapSentences|textMultiLine"
+        android:ems="10"
+        android:background="@null" >
+
+        <requestFocus />
+    </EditText>
+    <Button
+        android:id="@+id/sendmsg"
+       android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:textSize="40sp"
+        android:textStyle="bold" 
+        android:background="@drawable/button_red"
+         android:textColor="@drawable/button_text_color" 
+        android:text="@string/buttonsend" />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="9dp"
+        android:textSize="18sp"
+        android:text="@string/registeredmembers" 
+        />
+<ListView
+        android:id="@android:id/list"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:padding="16dp"
+       android:cacheColorHint="#00000000"
+       >
+
+   </ListView>
+    
+
+</LinearLayout>
+<!-- From: file:/home/k/workspace/Tromto/res/layout/activity_flat_list.xml -->

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Building Notifications</string>
+    <string name="register">Building Notifications</string>
+    <string name="title_activity_searchable">Select your building</string>
+    <string name="title_activity_registeradmin">Register a building</string>
+    <string name="title_activity_flat_list">Send a message</string>
+    <string name="title_activity_msg_toflat">Send direct message</string>
+    <string name="messages">Messages</string>
+    <string name="invite">Invite</string>
+    <string name="sendall">Send message to all</string>
+    <string name="themessage">Your message:</string>
+    <string name="buttonsend">Send</string>
+    <string name="registeredmembers">Building residents</string>
+    <string name="appartment">Apartament:&#160; </string>
+    <string name="admin">Administrator&#160; </string>
+    <string name="directmessage">Send message</string>
+    <string name="nomessage">Message cannot be empty.</string>
+    <string name="sentby">Sent by</string>
+    <string name="newmessage">New Message:</string>
+     <string name="messagesent">Message sent.</string>
+     <string name="deletemessage">Do you really want to delete the message?</string>
+     <string name="messagedeleted">Message deleted.</string>
+     <string name="getapplication">Download Building Notifications app to receive push notifications from your building\'s administrator and to get to know your neighbors.  Your building access code is: </string>
+    <string name="sharewith">Share with:</string>
+    
+    <string name="accesscode">Don\'t forget to enter your building\'s access code.</string>
+    <string name="searchyourflat">Search your building</string>
+    <string name="enteraddress">Building name or street.</string>
+    <string name="search">Search</string>
+    <string name="pinhint">The admin knows the access code.</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="hintappartment">Apartment number and floor.</string>
+    <string name="registerbtn">Register</string>
+    <string name="buildingname">Building:</string>
+    <string name="buildingnameandaddress">Building name and address.</string>
+    <string name="registeradmin">I am administrator. Register a new building.</string>
+    <string name="pinhintadmin">The access code is necessary to register \nin to your building. Write down this code \nand communicate it to the building residents.</string>
+    <string name="registerbtnadmin">Register as admin to this building</string>
+    <string name="nointernet">You are not connected to the internet.</string>
+    <string name="usernameexists">This name already exists.</string>
+    <string name="wrongpin">Wrong access code. Contact your administrator.</string>
+    <string name="nobuilding">Building not found. Try a less specific search or if the building hasn\'t been created yet contact your building administrator or register it yourself as admin.</string>
+    
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">Successfuly registered</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">New message</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering"></string>
+    <string name="server_registered">The account has been registered.</string>
+    <string name="server_unregistered">From Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="search_title">Find your flat</string>
+    <string name="search_hint">Find your flat</string>
+    <string name="title_activity_find_flat">FindFlat</string>
+    <string name="action_settings">Settings</string>
+    <string name="ap">Apartament</string>
+    <string name="flatadded">Building added.</string>
+    <string name="send_message">Write message</string>
+    <string name="writemessageto">Write message to:</string>
+
+
+</resources>

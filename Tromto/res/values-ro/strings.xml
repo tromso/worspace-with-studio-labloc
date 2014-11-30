@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">La bloc</string>
+    <string name="register">La bloc</string>
+    <string name="title_activity_searchable">Selecteaza blocul tau</string>
+    <string name="title_activity_registeradmin">Inscrie un bloc</string>
+    <string name="title_activity_flat_list">Trimite un mesaj</string>
+    <string name="title_activity_msg_toflat">Trimite mesaj direct</string>
+    <string name="send_message">Scrie mesaj</string>
+    <string name="messages">Mesaje</string>
+    <string name="invite">Invita</string>
+    <string name="sendall">Trimite mesaj la toti</string>
+    <string name="themessage">Mesajul tau</string>
+    <string name="buttonsend">Trimite</string>
+    <string name="registeredmembers">Locatari</string>
+    <string name="appartment">Apartament:&#160; </string>
+    <string name="ap">Apartament</string>
+    <string name="admin">Administrator&#160; </string>
+    <string name="directmessage">Trimite Mesaj</string>
+    <string name="writemessageto">Scrie mesaj pentru: </string>
+    <string name="nomessage">Mesajul nu poate fi gol</string>
+    <string name="sentby">De la </string>
+    <string name="newmessage">Mesaj nou: </string>
+    <string name="messagesent">Mesaj trimis. </string>
+    <string name="deletemessage">Chiar vrei sa stergi permanent mesajul? </string>
+    <string name="messagedeleted">Mesaj sters. </string>
+    <string name="getapplication">Descarca aplicatia La Bloc pentru a primi alerte de la administratorul tau si pentru ati cunoaste vecinii. Codul de acces pentru blocul tau este: </string>
+    <string name="sharewith">Invita prin: </string>
+
+    <string name="accesscode">Nu uita sa introduci codul pin al blocului tau. </string>
+    <string name="searchyourflat">Cauta blocul tau: </string>
+    <string name="enteraddress">Numele blocului sau strada. </string>
+    <string name="search">Cauta </string>
+    <string name="pinhint">Codul pin este cunoscut de administrator.</string>
+    <string name="username">Nume utilizator: </string>
+    <string name="password">Parola: </string>
+    <string name="hintappartment">Numarul apartamentului si eventual etajul. </string>
+    <string name="registerbtn">Inregistreaza-ma</string>
+    <string name="buildingname">Blocul: </string>
+    <string name="buildingnameandaddress">Numele blocului si adresa. </string>
+    <string name="registeradmin">Sunt administrator. Inregistreaza un bloc nou.</string>
+    <string name="pinhintadmin">Codul pin este necesar la inregistrarea fiecarui locatar \nin blocul dumneavoastra. Notati-va acest cod \nsi comunicati-l locatarilor.</string>
+    <string name="registerbtnadmin">Inregistreaza-ma ca administrator la acest bloc</string>
+    <string name="nointernet">Nu sunteti conectat la internet. </string>
+    <string name="usernameexists">Numele acesta exista deja. </string>
+    <string name="wrongpin">Codul pin este gresit. Contactati administratorul. </string>
+    <string name="flatadded">Blocul a fost adaugat. </string>
+    <string name="nobuilding">Blocul cautat nu a fost gasit. Incercati o cautare mai putin specifica sau daca blocul nu a fost creat adresati-va administratorului sau inregistrati-l dumneavoastra ca admin.</string>
+
+    <string name="title_activity_main">Push Notifications</string>
+    <string name="error_config">Please set the %1$s constant and recompile the app.</string>
+    <string name="already_registered">Device is already registered on server.</string>
+    <string name="gcm_registered">Inregistrare efectuata</string>
+    <string name="gcm_unregistered">From GCM: device successfully unregistered!</string>
+    <string name="gcm_message">Mesaj nou</string>
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="server_registering"></string>
+    <string name="server_registered">Contul a fost inregistrat!</string>
+    <string name="server_unregistered">From Server: successfully removed device!</string>
+    <string name="server_register_error">Could not register device on Server after %1$d attempts.</string>
+    <string name="server_unregister_error">Could not unregister device on Server (%1$s).</string>
+    <string name="options_register">Register</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_clear">Clear</string>
+    <string name="options_exit">Exit</string>
+    <string name="search_title">Find your flat</string>
+    <string name="search_hint">Find your flat</string>
+    <string name="title_activity_find_flat">FindFlat</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>

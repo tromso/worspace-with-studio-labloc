@@ -1,0 +1,182 @@
+package com.smileowl;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.widget.DrawerLayout;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import com.google.analytics.tracking.android.EasyTracker;
+
+public class MainActivity extends SherlockFragmentActivity {
+	private DrawerLayout mDrawerLayout;
+	private ListView mDrawerList;
+	private ActionBarDrawerToggle mDrawerToggle;
+	
+	private CharSequence mDrawerTitle;
+	private CharSequence mTitle;
+	private String[] mFragmentTitles;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		String filename="";
+		SharedPreferences prefs = getSharedPreferences(filename, 0);
+	    boolean runOnce = prefs.getBoolean("ranOnce", false);
+	            if (runOnce == false){
+	                 //dialog code here
+	            	Builder alert = new AlertDialog.Builder(this);
+	        		alert.setTitle("Info");
+	        		alert.setMessage("   The Lecture and Movie suggestions are user generated." +
+	        				" For this reason the database is not extensive. You won't find every lecture or movie ever created. " +
+	        				"Pressing the Search button without customizing the filters shows all the lectures in the database. " +
+	        				"\n"+"\n"+ "    Feel free to make your" +
+	        				" own recommendation by pressing the upload icon on the top right. " +
+	        				"Switch between lectures and movies by pressing the icon on the top left. " +
+	        				" ");
+	        		alert.setPositiveButton("OK",null);
+	        		alert.show();
+	            SharedPreferences.Editor editor = prefs.edit();
+	            editor.putBoolean("ranOnce", true);
+	            editor.commit();
+	            }
+		
+		
+		mTitle = mDrawerTitle = getTitle();
+		mFragmentTitles = getResources().getStringArray(R.array.fragments);
+		mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer);
+		mDrawerList = (ListView)findViewById(R.id.drawer_list);
+		
+		mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+		mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, mFragmentTitles));
+		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		
+		mDrawerToggle = new ActionBarDrawerToggle(this, 
+				mDrawerLayout, 
+				R.drawable.ic_drawer, 
+				R.string.drawer_open, 
+				R.string.drawer_close){
+			public void onDrawerClosed(View v){
+				getSupportActionBar().setTitle(mTitle);
+				supportInvalidateOptionsMenu();
+			}
+			public void onDrawerOpened(View v){
+				getSupportActionBar().setTitle(mDrawerTitle);
+				supportInvalidateOptionsMenu();
+			}
+		};
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+		if (savedInstanceState == null){
+			selectItem(0);
+		}
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		//getSupportMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+	
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch(item.getItemId()){
+		case android.R.id.home:
+			if (mDrawerLayout.isDrawerOpen(mDrawerList)){
+				mDrawerLayout.closeDrawer(mDrawerList);
+			} else {
+				mDrawerLayout.openDrawer(mDrawerList);
+			}
+			return true;/*
+			*/
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+	
+	private class DrawerItemClickListener implements ListView.OnItemClickListener{
+		@Override
+		public void onItemClick(AdapterView<?> parent, View v, int position, long id){
+			selectItem(position);
+		}
+	}
+	
+	private void selectItem(int position){
+		Fragment newFragment = new Fragment_2();
+		FragmentManager fm = getSupportFragmentManager();
+		switch(position){
+		case 0:
+			newFragment = new Fragment_2();
+			break;
+		case 1:
+			newFragment = new Fragment_1();
+			break;
+
+		}
+		fm.beginTransaction()
+		.replace(R.id.content_frame, newFragment)
+		.commit();
+		
+		mDrawerList.setItemChecked(position, true);
+		setTitle(mFragmentTitles[position]);
+		mDrawerLayout.closeDrawer(mDrawerList);
+	}
+	
+	@Override
+	public void setTitle(CharSequence title){
+		mTitle = title;
+		getSupportActionBar().setTitle(title);
+	}
+	
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState){
+		super.onPostCreate(savedInstanceState);
+		mDrawerToggle.syncState();
+	}
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig){
+		super.onConfigurationChanged(newConfig);
+		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	
+
+		  @Override
+		  public void onStart() {
+		    super.onStart();
+		    // The rest of your onStart() code.
+		    EasyTracker.getInstance(this).activityStart(this);  // Add this method.
+		  }
+
+		  @Override
+		  public void onStop() {
+		    super.onStop();
+		     // The rest of your onStop() code.
+		    EasyTracker.getInstance(this).activityStop(this);  // Add this method.
+		  }
+		
+	
+	
+
+}

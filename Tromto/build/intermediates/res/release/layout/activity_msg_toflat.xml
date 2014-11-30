@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background1" >   
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >   
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="7dp"
+         />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/themessage"
+        android:inputType="textCapSentences|textMultiLine"
+        android:digits="0,1,2,3,4,5,6,7,8,9,-,.,,,(,),:,/,_,\,!,?,@,#,$,%,^,*,+,=,'qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNNM " 
+        android:padding="7dp"
+        android:ems="10"
+        android:background="@null" >
+
+        <requestFocus />
+    </EditText>
+    <Button android:id="@+id/sendmsg"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="@string/directmessage"
+        android:layout_margin="10dip"
+        android:textSize="40sp"
+        android:textStyle="bold" 
+        android:background="@drawable/button_green"
+         android:textColor="@drawable/button_text_color" />
+
+</LinearLayout>
+     </ScrollView>
+
+</LinearLayout><!-- From: file:/home/k/workspace/Tromto/res/layout/activity_msg_toflat.xml -->
